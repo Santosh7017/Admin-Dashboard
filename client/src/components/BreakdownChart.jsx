@@ -31,7 +31,7 @@ console.log('formatteddata',formattedData);
       height={isDashboard ? "400px" : "100%"}
       width={undefined}
       minHeight={isDashboard ? "325px" : undefined}
-      minWidth={isDashboard ? "325px" : undefined}
+      minWidth={isDashboard ? "308px" : undefined}
       position="relative"
     >
       <ResponsivePie
@@ -97,10 +97,10 @@ console.log('formatteddata',formattedData);
             anchor: "bottom",
             direction: "row",
             justify: false,
-            translateX: isDashboard ? 20 : 0,
+            translateX: isDashboard ? 10 : 0,
             translateY: isDashboard ? 50 : 56,
             itemsSpacing: 0,
-            itemWidth: 100,
+            itemWidth: isDashboard? 70: 100,
             itemHeight: 18,
             itemTextColor: "#999",
             itemDirection: "left-to-right",
@@ -120,7 +120,7 @@ console.log('formatteddata',formattedData);
       />
       <Box
         position="absolute"
-        top="50%"
+        top="48%"
         left="50%"
         color={theme.palette.secondary[400]}
         textAlign="center"
@@ -131,7 +131,7 @@ console.log('formatteddata',formattedData);
             : "translate(-50%, -100%)",
         }}
       >
-        <Typography variant="h6">
+        <Typography variant="h6" sx={{fontSize: "10px"}}>
           {isDashboard && "Total: "} ${data.yearlySalesTotal}
         </Typography>
       </Box>

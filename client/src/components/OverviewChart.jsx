@@ -41,7 +41,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
       },
       { sales: 0, units: 0 }
     );
-    console.log(totalSalesLine);
+    
     return [[totalSalesLine], [totalUnitsLine]]
   }, [data]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -134,8 +134,8 @@ const OverviewChart = ({ isDashboard = false, view }) => {
           anchor: "bottom-right",
           direction: "column",
           justify: false,
-          translateX: 30,
-          translateY: -40,
+          translateX: -180,
+          translateY: 55,
           itemsSpacing: 0,
           itemDirection: "left-to-right",
           itemWidth: 80,

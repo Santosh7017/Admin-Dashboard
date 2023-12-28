@@ -60,7 +60,7 @@ const DashBoard = () => {
     },
   ];
   return (
-    <Box m="1rem 2rem">
+    <Box m="0rem 1rem">
       <FlexBetween>
         <Header title="DASHBOARD" subtitle="welcome to your dashboard" />
         <Box>
@@ -68,7 +68,7 @@ const DashBoard = () => {
             sx={{
               backgroundColor: theme.palette.secondary.light,
               color: theme.palette.background.alt,
-              fontSize: "14px",
+              fontSize: "10px",
               fontWeight: "bold",
               padding: "10px 20px",
             }}
