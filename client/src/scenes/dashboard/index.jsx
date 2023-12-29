@@ -59,12 +59,27 @@ const DashBoard = () => {
       renderCell: (params) => `${Number(params.value).toFixed(2)}`,
     },
   ];
+
+  const handleDownload = () => {
+      if(data && !isLoading){
+        const jsonData = JSON.stringify(data);
+
+        const blob = new Blob([jsonData], {type: 'application/json'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'report.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+  }
   return (
     <Box m="0rem 1rem">
       <FlexBetween>
         <Header title="DASHBOARD" subtitle="welcome to your dashboard" />
         <Box>
           <Button
+          onClick={handleDownload}
             sx={{
               backgroundColor: theme.palette.secondary.light,
               color: theme.palette.background.alt,
